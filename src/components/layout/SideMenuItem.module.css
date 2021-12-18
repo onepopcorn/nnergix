@@ -1,0 +1,88 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 3.5em;
+    color: var(--color-alt);
+    position: relative;
+    overflow: hidden;
+}
+
+.container.active::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--color-accent);
+}
+
+.container::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--color-main);
+}
+
+.container:hover::before,
+.container:focus-within::before,
+.container:active::before {
+    transform: scale(100);
+}
+
+.container[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 0.8em 0.8em;
+    overflow: hidden;
+    background: transparent;
+}
+
+.link:hover,
+.link:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 0.2em;
+    /* Prevent Layout Shift due to Material Icons */
+    max-width: 24px;
+}
+
+/* Hide text content in an accessible way */
+.iconText {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+/* Media queries */
+@media screen and (min-width: 920px) {
+    .iconText {
+        width: auto;
+        text-indent: inherit;
+    }
+
+    .link {
+        padding: 1em 1.3em;
+    }
+}
+
+/* Animations */
+@media (prefers-reduced-motion: no-preference) {
+    .container::before {
+        transition: transform 350ms ease-in;
+    }
+}
