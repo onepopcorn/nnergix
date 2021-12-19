@@ -1,11 +1,16 @@
 .widgetareaContainer {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
 }
 
 .breadcrumbs {
     display: flex;
     align-items: center;
+    width: 100%;
+    position: fixed;
     padding: 0.5em 1em;
     background-color: var(--color-alt);
 }
@@ -28,8 +33,9 @@
 
 .content {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     grid-template-rows: min-content;
+    padding-top: 4rem;
     background-color: var(--color-main-bg);
 }
 
