@@ -29,3 +29,8 @@
 .widgetContent {
     padding: 1em 1.3em;
 }
+
+.widgetIcon {
+    width: 25px;
+    margin-right: 0.25em;
+}

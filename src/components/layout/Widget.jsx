@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types'
 import style from './Widget.module.css'
 
-const Widget = ({ title, children }) => {
+const Widget = ({ title, icon, children }) => {
     return (
         <section className={style.widgetContainer}>
             <div className={style.widgetInnerContainer}>
                 {
-                    title &&
+                    (title || icon) &&
                     <header className={style.widgetHeader}>
+                        {icon && <span className={`material-icons ${style.widgetIcon}`}>{icon}</span>}
                         <h2>{title}</h2>
                     </header>
                 }
@@ -20,5 +21,7 @@ const Widget = ({ title, children }) => {
 export default Widget
 
 Widget.propTypes = {
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
+    title: PropTypes.string,
+    icon: PropTypes.string,
 }
