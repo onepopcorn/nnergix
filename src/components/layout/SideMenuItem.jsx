@@ -4,7 +4,7 @@ import style from './SideMenuItem.module.css'
 const SideMenuItem = ({ text, link, icon = 'category', active = false, disabled = false }) => {
 
     const container_classes = [
-        style.container,
+        style.sidemenuItemContainer,
         active ? style.active : null,
     ].join(' ')
 

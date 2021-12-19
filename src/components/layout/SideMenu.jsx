@@ -5,7 +5,7 @@ import SideMenuItem from './SideMenuItem.jsx'
 const SideMenu = ({ items = [] }) => {
     const menu_items = items.map((data, idx) => <SideMenuItem key={idx} {...data} />)
     return (
-        <aside className={style.container}>
+        <aside className={style.sidemenuContainer}>
             <ul>
                 {menu_items}
             </ul>

@@ -3,7 +3,7 @@ import logo from '../../assets/logo.webp'
 
 const Header = ({ children }) => {
     return (
-        <header className={style.container}>
+        <header className={style.headerContainer}>
             <img src={logo} alt="NNergix" className={style.brand} />
             {children}
         </header>
