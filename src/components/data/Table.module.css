@@ -1,0 +1,35 @@
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    white-space: nowrap;
+    padding: 0.5em;
+    color: var(--color-alt);
+    background-color: var(--color-main);
+}
+
+.table td {
+    padding: 0.5em;
+    text-align: center;
+}
+
+.table td:first-child {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.table tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.table tr:last-child {
+    border-top: 1px solid;
+    font-weight: 700;
+}
