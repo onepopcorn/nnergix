@@ -15,7 +15,7 @@
 .widgetHeader {
     display: flex;
     align-items: center;
-    padding: 1em 1.3em;
+    padding: 0.5em 1.3em;
     width: 100%;
     color: var(--color-alt);
     background-color: var(--color-accent);
@@ -27,5 +27,5 @@
 }
 
 .widgetContent {
-    padding: 0 1.3em 1em;
+    padding: 1em 1.3em;
 }
