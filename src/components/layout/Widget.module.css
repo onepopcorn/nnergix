@@ -1,0 +1,31 @@
+.widgetContainer {
+    padding: 1em;
+}
+
+.widgetInnerContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: var(--color-alt);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.widgetHeader {
+    display: flex;
+    align-items: center;
+    padding: 1em 1.3em;
+    width: 100%;
+    color: var(--color-alt);
+    background-color: var(--color-accent);
+}
+
+.widgetHeader h2 {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.widgetContent {
+    padding: 0 1.3em 1em;
+}

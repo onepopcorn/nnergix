@@ -2,7 +2,7 @@
     /* Colors */
     --color-main: #242b35;
     --color-alt: #ffffff;
-    --color-accent: #60b1e9;
+    --color-accent: #cb7565;
     --color-main-bg: #eeeeee;
     --color-alt-bg: #34495e;
 
@@ -20,6 +20,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--color-main-bg);
+    font-size: 14px;
 }
 
 ul {
@@ -38,4 +39,12 @@ a:hover,
 a:focus {
     color: inherit;
     text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
 }

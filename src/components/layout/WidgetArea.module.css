@@ -1,0 +1,40 @@
+.widgetareaContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: var(--color-alt);
+}
+
+.breadcrumbs h1 {
+    font-size: 1.8em;
+    color: var(--color-accent);
+}
+
+.icon {
+    width: 45px; /* Prevent Layout Shift for font-icons */
+    height: 45px; /* Prevent Layout Shift for font-icons */
+    padding: 5px;
+    border-radius: 100%;
+    font-size: 2.5em;
+    margin-right: 0.25em;
+    color: var(--color-alt);
+    background-color: var(--color-accent);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content;
+    background-color: var(--color-main-bg);
+}
+
+@media screen and (min-width: 1200px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
