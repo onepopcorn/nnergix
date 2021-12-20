@@ -1,0 +1,80 @@
+.seriesContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.seriesActions {
+    margin: 1em 0 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seriesActions select {
+    min-width: 150px;
+    border-radius: 0;
+    margin: 0 0.5em;
+}
+
+.seriesData {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+    color: var(--color-alt);
+    background-color: var(--color-alt-bg);
+}
+
+.seriesDataIcon {
+    font-size: 8em;
+}
+
+.seriesDataAlt {
+    text-align: center;
+    font-size: 8em;
+}
+
+.seriesDataAlt .seriesDataHeader {
+    font-size: 1rem;
+}
+
+.seriesDataHeader {
+    text-transform: uppercase;
+}
+
+.seriesCreatedBy {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2em;
+    font-size: 1.2em;
+}
+
+.seriesDataLatLng {
+    font-size: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: right;
+}
+.seriesDataLatLng .seriesDataHeader {
+    margin: 0.5em 0;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 920px) {
+    .seriesData {
+        flex-direction: row-reverse;
+    }
+
+    .seriesDataAlt {
+        text-align: right;
+    }
+
+    .seriesDataLatLng {
+        flex-direction: column;
+    }
+
+    .seriesCreatedBy {
+        justify-content: flex-end;
+    }
+}
