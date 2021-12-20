@@ -1,0 +1,30 @@
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 4em;
+    color: var(--color-accent);
+}
+
+.loadingIcon {
+    margin-bottom: 0.5em;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .loadingIcon {
+        animation: spin 1s linear infinite reverse;
+    }
+}
