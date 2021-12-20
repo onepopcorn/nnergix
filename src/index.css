@@ -63,14 +63,23 @@ button:is(:active, :focus) {
     outline: 2px solid var(--color-alt-bg);
 }
 
-input {
-    appearance: none;
+input,
+select {
     border: none;
     padding: 0.5em 1em;
     border-radius: 3px;
     background-color: var(--color-main-bg);
 }
 
-input:is(:active, :focus) {
+input {
+    appearance: none;
+}
+
+select {
+    cursor: pointer;
+}
+
+input:is(:active, :focus),
+select:is(:active, :focus) {
     outline: 2px solid var(--color-alt-bg);
 }
