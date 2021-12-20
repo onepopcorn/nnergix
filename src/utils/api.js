@@ -23,6 +23,6 @@ export async function getGraphData(id, controller) {
 }
 
 export async function getSeriesData(controller) {
-    const res = await fetch('data_frontend.json', controller.signal)
+    const res = await fetch('/data/data_frontend.json', controller.signal)
     return await res.json()
 }
