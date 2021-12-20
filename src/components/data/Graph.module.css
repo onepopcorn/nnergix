@@ -1,0 +1,27 @@
+.graphContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.graphControls {
+    margin: 2em 0;
+}
+
+.graphInputGroup {
+    display: inline;
+    margin-right: 5px;
+}
+
+.graphInputGroup label {
+    padding-right: 5px;
+}
+
+.graphInputGroup input {
+    width: 75px;
+    border: 1px solid var(--color-accent);
+    background-color: transparent;
+}
+
+.plotWrapper {
+    overflow-x: auto;
+}
