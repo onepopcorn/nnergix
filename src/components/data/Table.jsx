@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types'
+import useTableData from '../../hooks/useTableData.js'
+import Loading from './Loading.jsx'
+import LoadingError from './LoadingError.jsx'
 import style from './Table.module.css'
 
-const Table = ({ fields = [], data = [] }) => {
+const Table = ({ id }) => {
+    const { error, loading, fields, data } = useTableData(id)
+
+    if (error) return <LoadingError />
+    if (loading) return <Loading />
+
     return (
         <div className={style.tableContainer}>
             <table className={style.table}>
@@ -31,8 +39,5 @@ const Table = ({ fields = [], data = [] }) => {
 export default Table
 
 Table.propTypes = {
-    fields: PropTypes.arrayOf(PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        type: PropTypes.string.isRequired,
-    }))
+    id: PropTypes.string.isRequired,
 }
