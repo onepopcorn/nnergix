@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { useEffect } from 'react/cjs/react.development'
+import { useEffect, useState } from 'react'
 import { getGraphData } from '../utils/api.js'
 
 const useGraphData = (id = null) => {
