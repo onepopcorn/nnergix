@@ -1,0 +1,23 @@
+[   
+    {
+        "name": "TS1",
+        "altitude": 200,
+        "created_by": 501,
+        "lat": -44.6,
+        "lng": 3
+    },
+    {
+        "name": "TS2",
+        "altitude": 100,
+        "created_by": 300,
+        "lat": -34.4,
+        "lng": 2.4
+    },
+    {
+        "name": "TS3",
+        "altitude": 120,
+        "created_by": 501,
+        "lat": 63.6,
+        "lng": 1.5
+    }
+]
