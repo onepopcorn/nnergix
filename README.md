@@ -2,6 +2,8 @@
 
 This site has been created with **vite.js**, for more information please refer to documentation at vite's [website](https://vitejs.dev/)
 
+Click [here](https://onepopcorn.github.io/nnergix/) to see a working demo of the app
+
 ## Technical requirements
 
 -   node ^16.0.0
