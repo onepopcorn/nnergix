@@ -1,7 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Graph from '../Graph.jsx'
-import useGraphData from '../../../hooks/useGraphData.js'
 
 test('Graph should show error when data can\'t be loaded', async () => {
     fetch.mockReject(() => Promise.reject('file not found'))
@@ -45,6 +44,13 @@ test('Graph should load data', async () => {
     userEvent.type(yInput, '200')
 
     userEvent.click(screen.getByRole('button', { name: /add/i }))
+
+
+    // disable when there's no input data
+    userEvent.clear(xInput)
+    userEvent.clear(yInput)
+
+    expect(screen.getByRole('button', { name: /add/i })).toBeDisabled()
 
     // Reset controls
     userEvent.click(screen.getByRole('button', { name: /reset/i }))

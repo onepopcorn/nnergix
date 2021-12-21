@@ -63,6 +63,10 @@ button:is(:active, :focus) {
     outline: 2px solid var(--color-alt-bg);
 }
 
+button:disabled {
+    opacity: 0.5;
+}
+
 input,
 select {
     border: none;
