@@ -11,18 +11,18 @@ const endpoints = {
 }
 
 export async function getTableData(id, controller) {
-    const url = `/data/monthly_table_${endpoints[id]}.json`
+    const url = `${import.meta.env.BASE_URL}/data/monthly_table_${endpoints[id]}.json`
     const res = await fetch(url, { signal: controller.signal })
     return await res.json()
 }
 
 export async function getGraphData(id, controller) {
-    const url = `/data/linechart_${endpoints[id]}.json`
+    const url = `${import.meta.env.BASE_URL}/data/linechart_${endpoints[id]}.json`
     const res = await fetch(url, { signal: controller.signal })
     return await res.json()
 }
 
 export async function getSeriesData(controller) {
-    const res = await fetch('/data/data_frontend.json', controller.signal)
+    const res = await fetch(`${import.meta.env.BASE_URL}/data/data_frontend.json`, controller.signal)
     return await res.json()
 }
